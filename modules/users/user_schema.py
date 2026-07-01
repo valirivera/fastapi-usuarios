@@ -18,7 +18,6 @@ class UserResponse(UserBase):
     
 class UserUpdate(BaseModel):
     email: Optional[EmailStr] = None
-    password: Optional[str] = Field(None, min_length=6, max_length=100)
     role_id: Optional[int] = Field(None, gt=0)
     is_active: Optional[bool] = None
     
